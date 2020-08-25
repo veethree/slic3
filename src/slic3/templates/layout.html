@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SLIC3 - Slic3 your links!</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% block head %}
+
+	{% endblock %}
+</head>
+<body>
+	<div class="title">
+		<h1 class="title">Slic3</h1>
+	</div>
+	<div class="navbar">
+		<a href="/">HOME</a> <a> | </a> <a href="/about">ABOUT</a> <a> | </a> <a href="/active_links">ACTIVE LINKS</a>
+	</div>
+	{% with msgs = get_flashed_messages(with_categories=true) %}
+		{% if msgs %}
+			{% for cat, msg in msgs %}
+				<div class="{{ cat }}">
+					<p>{{ msg }}</p>
+				</div>
+			{% endfor %}
+		{% endif %}
+	{% endwith %}
+
+	{% block body %}
+
+	{% endblock %}
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<div>
+		<p>All the links shortened with Slic3 are public. The list below contains all currently active links.</p>
+		<h2>Active links:</h2>
+		<hr>
+		{% for item in data %}
+			<p style="text-align: left; word-break: break-all">Long: {{ item.long_url }}</p>
+			<p style="text-align: left">Short: {{ my_url }}{{ item.short_url }}</p>
+			<p style="text-align: left">Time stamp: {{ item.time_stamp }}</p>
+			<hr>
+		{% endfor %}
+	</div>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<body onload="select()">
+		<div>
+			<label for="url">Here's your slic3'd link!</label>
+			<input id="url" class="textInput" type=text value="{{ my_url }}{{ short_url }}" autofocus, autocomplete="off">
+			<button class="button" onclick="copy()">Copy</button>
+			<br><br>
+			<a href="/" style="font-size:20px">Shrink another link!</a>
+			<br>
+			<p class="attention">This link will expire in 24 hours!</p>
+		</div>
+
+		<script>
+			function select() {
+				var copyText = document.getElementById("url");
+				  copyText.select();
+				  copyText.setSelectionRange(0, 99999);
+			}
+
+			function copy() {
+				  var copyText = document.getElementById("url");
+				  copyText.select();
+				  copyText.setSelectionRange(0, 99999);
+				  document.execCommand("copy");
+				  alert("Copied " + copyText.value + " to clipboard");
+			}
+		</script>
+	</body>
+{% endblock %}

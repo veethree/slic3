@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Roboto&display=swap');
+
+:root {
+	--bgColor: rgb(240, 240, 240);
+	--panelColor: rgb(40, 40, 40);
+	--textColor: rgb(240, 240, 240);
+	--accentColor: rgb(30, 120, 240);
+	--errorColor: rgb(255, 50, 50);
+	--attentionColor: rgb(50, 255, 80);
+}
+
+body {
+	background-color: var(--accentColor)
+}
+
+div {
+	background-color: var(--panelColor);
+	margin: auto;
+	width: 80%;
+	font-family: "Roboto", sans-serif;
+	text-align: center;
+	padding: 10px;
+	margin-top: 3px;
+}
+
+
+a, label, p, h2 {
+	color: var(--textColor);
+}
+
+.attention {
+	color: var(--attentionColor);
+}
+
+.error {
+	background-color: var(--errorColor)
+}
+
+.title {
+	font-family: 'Major Mono Display', monospace;
+	font-size: 80px;
+	text-align: center;
+	margin: none;
+	padding: none;
+	color: var(--accentColor);
+	line-height: 10px;
+}
+
+.textInput {
+	width: 90%;
+	border: none;
+	outline: none;
+	margin: 10px;
+
+	font-family: "Roboto", sans-serif;
+	font-size: 24px;
+}
+
+.button {
+	width: 50%;
+	padding: 4px;
+	background-color: var(--accentColor);
+	color: var(--textColor);
+	border: none;
+
+	font-family: "Roboto", sans-serif;
+	font-size: 18px;
+}

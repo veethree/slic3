@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block body %}
+	<div>
+		<h2>What is slic3?</h2>
+		<p>Slic3 is a small utility that takes long links and shortens them to make them more sharable!</p>
+		<hr>
+		<h2>It can turn this garbage:</h2>
+		<a style="word-break:break-all" href="{{ example_link }}">{{ example_link }}</a>
+		<h2>To this beauty:</h2>
+		<a href="{{ example_short }}">{{ my_url }}{{ example_short }}</a>
+		<hr>
+		<h2>About slic3 links</h2>
+		<p style="display:inline" >
+			Slic3 links aren't permanent. They stop working after 24 hours, Unless their timestamp is refreshed
+			by shortening the same URL. They are also ALL public. Anyone can see a full list of all currently
+		active links on the </p><a style="display:inline" href="active_links">Active links</a><p style="display:inline" > page.</p>
+		<hr>
+		<p style="display:inline">You can check out the source code on </p><a style="display:inline" href="https://github.com/veethree/slic3">Github</a>
+	</div>
+{% endblock %}
