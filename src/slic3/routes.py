@@ -33,6 +33,8 @@ def time_stamp():
 def new_short_url(long_url):
 	db_link = Link.query.filter_by(long_url=long_url).first()
 	if db_link:
+		db_link.time_stamp = time_stamp()
+		db.session.commit()
 		short_url = db_link.short_url
 	else:
 		short_url = random_string(4)
