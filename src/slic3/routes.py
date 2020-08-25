@@ -6,8 +6,8 @@ import string
 from random import randrange
 import time
 import math
-
 example_link = "https://www.google.com/imgres?imgurl=https%3A%2F%2Fi.ytimg.com%2Fvi%2FdQw4w9WgXcQ%2Fmaxresdefault.jpg&imgrefurl=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DdQw4w9WgXcQ&tbnid=9ynv09zkGi7fMM&vet=12ahUKEwiDxOfP8anrAhUIwAIHHYLGDlMQMygBegUIARDOAQ..i&docid=6s4NuhB18CEGIM&w=1280&h=720&q=rick%20astley&ved=2ahUKEwiDxOfP8anrAhUIwAIHHYLGDlMQMygBegUIARDOAQ"
+
 # This is a regex that validates a URL, I stole it from Django.
 # Source: https://github.com/django/django/blob/stable/1.3.x/django/core/validators.py#L45
 is_url = re.compile(
