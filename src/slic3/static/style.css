@@ -16,7 +16,6 @@ body {
 div {
 	background-color: var(--panelColor);
 	margin: auto;
-	width: 80%;
 	font-family: "Roboto", sans-serif;
 	text-align: center;
 	padding: 10px;

@@ -7,7 +7,7 @@
 		<hr>
 		{% for item in data %}
 			<p style="text-align: left; word-break: break-all">Long: {{ item.long_url }}</p>
-			<p style="text-align: left">Short: {{ my_url }}{{ item.short_url }}</p>
+			<p style="text-align: left; word-break: break-all">Short: {{ my_url }}{{ item.short_url }}</p>
 			<p style="text-align: left">Time stamp: {{ item.time_stamp }}</p>
 			<hr>
 		{% endfor %}
