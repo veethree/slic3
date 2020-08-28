@@ -1,4 +1,4 @@
-from flask import render_template, request, redirect, flash, url_for
+from flask import render_template, request, redirect, flash, url_for, send_from_directory
 from slic3 import app, db
 from slic3.models import Link
 import re
@@ -77,6 +77,10 @@ def new_link():
 
 	return render_template("new_link.html", my_url=my_url, short_url=short_url)
 
+@app.route("/betra_rsf")
+def rsf():
+	return send_from_directory("static/betra_rsf", "Betra_RSF.user.js")
+
 @app.route("/<short_url>")
 def red(short_url):
 	my_url = request.base_url.rstrip(string.ascii_lowercase + "_")
@@ -84,9 +88,9 @@ def red(short_url):
 	if db_link:
 		return redirect(db_link.long_url, code=302)
 	else:
+		# UNKNOW
 		flash("404: URL Not found", "error")
 		return redirect(url_for("index"))	
-
 
 
 
